@@ -27,13 +27,19 @@ header .inner {
 }
 
 header .logo {
-  height: 75px;
+  height: 60px;
   position: absolute;
   /* 수직 가운데 배치 */
   top: 0;
   bottom: 0;
   left: 0;
   margin: auto;
+}
+
+header .logo p {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 50px;
+  color: #4fc3f7;
 }
 
 header .sub-menu {
