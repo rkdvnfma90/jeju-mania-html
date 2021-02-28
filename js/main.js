@@ -37,3 +37,12 @@ window.addEventListener(
     }
   }, 300)
 )
+
+const $fadeElements = document.querySelectorAll('.visual .fade-in')
+
+$fadeElements.forEach((elem, index) => {
+  gsap.to(elem, 1, {
+    delay: (index + 1) * 0.5,
+    opacity: 1,
+  })
+})
