@@ -16,8 +16,8 @@ a {
 
 .inner {
   width: 1100px;
-  margin: 0 auto;
-  position: relative; /* 가운데 정렬 */
+  margin: 0 auto; /* 가운데 정렬 */
+  position: relative;
 }
 
 header {
@@ -139,9 +139,9 @@ header .main-menu .item {
 }
 
 header .main-menu .item .item__name {
-  padding: 10px 20px 34px 20px;
+  padding: 10px 20px 20px 20px;
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 header .main-menu .item:hover .item__name {
@@ -176,13 +176,14 @@ header .main-menu .item .item__contents .contents__menu > ul > li {
 
 header .main-menu .item .item__contents .contents__menu > ul > li h4 {
   padding: 3px 0 12px 0;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
   color: #fff;
 }
 
 header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   padding: 5px 0;
-  font-size: 12px;
+  font-size: 14px;
   color: #999;
   cursor: pointer;
 }
@@ -191,7 +192,7 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   color: #000;
 }
 
-header .main-menu .item .item__contents .contents__texture {
+/* header .main-menu .item .item__contents .contents__texture {
   padding: 26px 0;
   font-size: 12px;
   background-image: url('../images/main_menu_pattern.jpg');
@@ -205,4 +206,4 @@ header .main-menu .item .item__contents .contents__texture h4 {
 header .main-menu .item .item__contents .contents__texture p {
   color: #669900;
   margin: 4px 0 14px;
-}
+} */
