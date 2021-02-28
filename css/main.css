@@ -1,3 +1,4 @@
+/* 공통 부분 */
 body {
   color: #333;
   font-size: 16px;
@@ -21,11 +22,52 @@ a {
   margin: 0 auto; /* 가운데 정렬 */
 }
 
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 3px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #fff;
+}
+
+/* header 영역 */
 header {
   position: fixed;
   width: 100%; /* position fixed와 absolute는 가로 길이가 최대한으로 줄어드려는 성질이 있음*/
   background-color: #fff;
   border-bottom: 1px solid #c8c8c8;
+  z-index: 9;
 }
 
 header > .inner {
@@ -45,7 +87,7 @@ header .logo {
 header .logo p {
   font-family: 'Black Han Sans', sans-serif;
   font-size: 50px;
-  color: #a3daff;
+  color: #333;
 }
 
 header .sub-menu {
@@ -112,7 +154,7 @@ header .sub-menu .search input {
 
 header .sub-menu .search input:focus {
   width: 190px;
-  border-color: #4fc3f7;
+  border-color: #333;
 }
 
 header .sub-menu .search .material-icons {
@@ -148,8 +190,8 @@ header .main-menu .item .item__name {
 }
 
 header .main-menu .item:hover .item__name {
-  background-color: #a3daff;
-  color: #1ec0ff;
+  background-color: #333;
+  color: #fff;
   border-radius: 6px 6px 0 0;
 }
 
@@ -165,7 +207,7 @@ header .main-menu .item:hover .item__contents {
 }
 
 header .main-menu .item .item__contents .contents__menu {
-  background-color: #a3daff;
+  background-color: #333;
 }
 
 header .main-menu .item .item__contents .contents__menu > ul {
@@ -207,4 +249,40 @@ header .badges .badge {
   margin-bottom: 12px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+/* visual 영역 */
+.visual {
+  background-color: #000;
+  background-position: center;
+}
+
+.visual .inner {
+  height: 646px;
+}
+
+.visual .title {
+  position: absolute;
+  top: 230px;
+  left: -10px;
+}
+
+.visual .title .btn {
+  position: absolute;
+  top: 259px;
+  left: 173px;
+}
+
+.visual .bunker1.image {
+  position: absolute;
+  top: 174px;
+  right: 100px;
+  border-radius: 20px;
+}
+
+.visual .bunker2.image {
+  position: absolute;
+  bottom: 30px;
+  right: 162px;
+  border-radius: 20px;
 }
