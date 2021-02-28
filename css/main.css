@@ -4,6 +4,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
+  height: 3000px;
 }
 
 img {
@@ -15,12 +16,14 @@ a {
 }
 
 .inner {
+  position: relative;
   width: 1100px;
   margin: 0 auto; /* 가운데 정렬 */
-  position: relative;
 }
 
 header {
+  position: fixed;
+  width: 100%; /* position fixed와 absolute는 가로 길이가 최대한으로 줄어드려는 성질이 있음*/
   background-color: #fff;
   border-bottom: 1px solid #c8c8c8;
 }
@@ -192,18 +195,16 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   color: #000;
 }
 
-/* header .main-menu .item .item__contents .contents__texture {
-  padding: 26px 0;
-  font-size: 12px;
-  background-image: url('../images/main_menu_pattern.jpg');
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
 }
 
-header .main-menu .item .item__contents .contents__texture h4 {
-  color: #999;
-  font-weight: 700;
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
-
-header .main-menu .item .item__contents .contents__texture p {
-  color: #669900;
-  margin: 4px 0 14px;
-} */
