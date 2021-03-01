@@ -71,3 +71,17 @@ new Swiper('.place .swiper-container', {
     nextEl: '.place .swiper-next',
   },
 })
+
+/* 그외 갈만한 곳 토글 */
+const $place = document.querySelector('.place')
+const $placeToggleBtn = document.querySelector('.toggle-place')
+let isHidePlace = false
+
+$placeToggleBtn.addEventListener('click', () => {
+  isHidePlace = !isHidePlace
+  if (isHidePlace) {
+    $place.classList.add('hide')
+  } else {
+    $place.classList.remove('hide')
+  }
+})

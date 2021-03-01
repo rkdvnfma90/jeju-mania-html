@@ -384,7 +384,7 @@ header .badges .badge {
   font-weight: 700;
 }
 
-.notice .notice-line .inner__right .toggle-promotion {
+.notice .notice-line .inner__right .toggle-place {
   width: 62px;
   height: 62px;
   cursor: pointer;
@@ -393,7 +393,7 @@ header .badges .badge {
   align-items: center;
 }
 
-.notice .notice-line .inner__right .toggle-promotion .material-icons {
+.notice .notice-line .inner__right .toggle-place .material-icons {
   font-size: 30px;
 }
 
@@ -401,6 +401,12 @@ header .badges .badge {
   height: 693px;
   background-color: #fff;
   position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.notice .place.hide {
+  height: 0;
 }
 
 .notice .place .swiper-container {
