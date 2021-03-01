@@ -441,7 +441,7 @@ header .badges .badge {
 
 .notice .place .swiper-pagination {
   /* swiper 라이브러리에 position 값이 들어 있기 때문에 아래 속성 사용 가능 */
-  bottom: 40px;
+  bottom: 50px;
   left: 0;
   right: 0;
 }
@@ -492,4 +492,46 @@ header .badges .badge {
 .notice .place .swiper-next:hover {
   background-color: #000;
   color: #fff;
+}
+
+.youtube {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.youtube .youtube__area {
+  width: 1920px;
+  background-color: orange;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.youtube .youtube__area::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* 16 : 9 비율 */
+}
+
+.youtube .youtube__cover {
+  background-image: url('../images/video_cover_pattern.png');
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
