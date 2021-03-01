@@ -5,7 +5,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  height: 3000px;
+  height: 6000px;
 }
 
 img {
@@ -59,6 +59,16 @@ a {
 .btn.btn--white:hover {
   color: #333;
   background-color: #fff;
+}
+
+.text-group .title {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 48px;
+}
+
+.text-group .description {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 32px;
 }
 
 /* header 영역 */
@@ -534,4 +544,94 @@ header .badges .badge {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.youtube .inner {
+  height: 700px;
+}
+
+.youtube .floating1 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.product {
+  background-image: url('../images/product_bg.jpg');
+}
+
+.product .inner {
+  height: 400px;
+}
+
+.product .floating2 {
+  position: absolute;
+  top: -95px;
+  right: 0;
+}
+
+.product .text-group {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+}
+
+.product .text-group .title {
+  margin-bottom: 10px;
+}
+
+.product .text-group .description {
+  margin-bottom: 15px;
+}
+
+.product .text-group .more {
+}
+
+.food {
+  background-image: url('../images/food_bg.png');
+}
+
+.food .inner {
+  height: 400px;
+}
+
+.food .food-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.food .text-group {
+  position: absolute;
+  top: 124px;
+  left: 450px;
+}
+
+.food .text-group .description {
+}
+
+.food .food-product {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.road {
+  background-image: url('../images/road_bg.png');
+  background-repeat: no;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.road .inner {
+  padding: 200px 0;
+}
+
+.road .floating3 {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

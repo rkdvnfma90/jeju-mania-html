@@ -85,3 +85,23 @@ $placeToggleBtn.addEventListener('click', () => {
     $place.classList.remove('hide')
   }
 })
+
+/* floating 요소 애니메이션 */
+const random = (min, max) => {
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
+
+const floatingObject = (selector, delay, size) => {
+  //gsap.to(selector, 지속시간, 옵션)
+  gsap.to(selector, random(1, 3), {
+    y: size, // y축
+    repeat: -1, // -1 무한
+    yoyo: true, // 한번 재생된 애니메이션을 역재생
+    ease: Back.easeInOut,
+    delay: random(0, 3),
+  })
+}
+
+floatingObject('.floating1', 1, 15)
+floatingObject('.floating2', 0.5, 15)
+floatingObject('.floating3', 1.5, 25)
