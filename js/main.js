@@ -19,6 +19,8 @@ $searchInput.addEventListener('blur', () => {
 
 /* 페이지 스크롤 제어 영역 */
 const $badge = document.querySelector('header .badges')
+const $toTop = document.querySelector('#to-top')
+
 window.addEventListener(
   'scroll',
   _.throttle(() => {
@@ -28,14 +30,28 @@ window.addEventListener(
         opacity: 0,
         display: 'none',
       })
+      // 최상단 버튼 보이기
+      gsap.to($toTop, 0.3, {
+        x: -130,
+      })
     } else {
       gsap.to($badge, 0.5, {
         opacity: 1,
         display: 'block',
       })
+      // 최상단 버튼 숨기기
+      gsap.to($toTop, 0.3, {
+        x: 0,
+      })
     }
   }, 300)
 )
+
+$toTop.addEventListener('click', () => {
+  gsap.to(window, 0.8, {
+    scrollTo: 0,
+  })
+})
 
 /* 요소를 순서대로 나타나도록 */
 const $fadeElements = document.querySelectorAll('.visual .fade-in')
@@ -107,7 +123,6 @@ floatingObject('.floating2', 0.5, 15)
 floatingObject('.floating3', 1.5, 25)
 
 /* scroll magic */
-
 const $spies = document.querySelectorAll('section.scroll-spy')
 
 $spies.forEach(function (elem) {
@@ -118,3 +133,7 @@ $spies.forEach(function (elem) {
     .setClassToggle(elem, 'show') // 요소가 화면에 보이면 show 클래스 추가
     .addTo(new ScrollMagic.Controller())
 })
+
+/* this year */
+const $thisYear = document.querySelector('.this-year')
+$thisYear.textContent = new Date().getFullYear()
