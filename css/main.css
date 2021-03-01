@@ -504,6 +504,7 @@ header .badges .badge {
   color: #fff;
 }
 
+/* youtube 영역 */
 .youtube {
   position: relative;
   height: 700px;
@@ -556,6 +557,7 @@ header .badges .badge {
   left: 0;
 }
 
+/* product 영역 */
 .product {
   background-image: url('../images/product_bg.jpg');
 }
@@ -584,9 +586,7 @@ header .badges .badge {
   margin-bottom: 15px;
 }
 
-.product .text-group .more {
-}
-
+/* food 영역 */
 .food {
   background-image: url('../images/food_bg.png');
 }
@@ -609,18 +609,16 @@ header .badges .badge {
   left: 450px;
 }
 
-.food .text-group .description {
-}
-
 .food .food-product {
   position: absolute;
   top: 0;
   right: 0;
 }
 
+/* road 영역 */
 .road {
   background-image: url('../images/road_bg.png');
-  background-repeat: no;
+  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -634,4 +632,67 @@ header .badges .badge {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+/* 바다영역 */
+.sea {
+  height: 100%;
+}
+
+.sea::before {
+  content: '';
+  opacity: 0.6;
+  background-image: url('../images/sea_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+}
+
+.sea .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.sea .medal {
+  width: 334px;
+  height: 334px;
+  perspective: 600px;
+}
+
+.sea .medal .front,
+.sea .medal .back {
+  position: absolute;
+  width: 334px;
+  height: 334px;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.sea .medal .front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(0deg); /* 0도에서 시작하겠다고 명시적으로 선언*/
+}
+
+.sea .medal .front img {
+  border-radius: 50%;
+}
+
+.sea .medal:hover .front {
+  transform: rotateY(180deg);
+}
+
+.sea .medal .back {
+  transform: rotateY(-180deg);
+}
+
+.sea .medal:hover .back {
+  transform: rotateY(0);
 }
