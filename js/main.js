@@ -105,3 +105,16 @@ const floatingObject = (selector, delay, size) => {
 floatingObject('.floating1', 1, 15)
 floatingObject('.floating2', 0.5, 15)
 floatingObject('.floating3', 1.5, 25)
+
+/* scroll magic */
+
+const $spies = document.querySelectorAll('section.scroll-spy')
+
+$spies.forEach(function (elem) {
+  new ScrollMagic.Scene({
+    triggerElement: elem, // 보임 여부를 감시할 요소 지정
+    triggerHook: 0.8, // 뷰포트 맨 아래가 1임
+  })
+    .setClassToggle(elem, 'show') // 요소가 화면에 보이면 show 클래스 추가
+    .addTo(new ScrollMagic.Controller())
+})
